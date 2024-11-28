@@ -1,0 +1,15 @@
+# 项目配置: 名称、日志目录
+project:
+  name: sa-admin
+  log-directory: /home/project/smartadmin/test/log
+
+# 项目端口和url根路径
+server:
+  port: 9008
+  servlet:
+    context-path: /
+
+# 环境
+spring:
+  profiles:
+    active: '@profiles.active@'

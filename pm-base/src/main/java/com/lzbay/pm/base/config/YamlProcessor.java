@@ -1,6 +1,7 @@
 package com.lzbay.pm.base.config;
 
 import cn.hutool.core.util.StrUtil;
+import com.lzbay.pm.base.common.constant.ConfigConst;
 import com.lzbay.pm.base.common.constant.StringConst;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -29,9 +30,9 @@ public class YamlProcessor implements EnvironmentPostProcessor {
 
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
-        String filePath = environment.getProperty(StringConst.LOG_PATH);
+        String filePath = environment.getProperty(ConfigConst.LOG_PATH);
         if (StrUtil.isNotBlank(filePath)) {
-            System.setProperty(StringConst.LOG_PATH, filePath);
+            System.setProperty(ConfigConst.LOG_PATH, filePath);
         }
 
         MutablePropertySources propertySources = environment.getPropertySources();
