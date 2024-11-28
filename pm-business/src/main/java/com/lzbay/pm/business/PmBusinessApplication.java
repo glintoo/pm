@@ -1,6 +1,6 @@
 package com.lzbay.pm.business;
 
-
+import com.lzbay.pm.base.listener.Ip2RegionListener;
 import com.lzbay.pm.base.listener.LogVariableListener;
 import org.apache.ibatis.annotations.Mapper;
 import org.mybatis.spring.annotation.MapperScan;
@@ -20,7 +20,7 @@ public class PmBusinessApplication {
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(PmBusinessApplication.class);
 
-        application.addListeners(new LogVariableListener());
+        application.addListeners(new LogVariableListener(), new Ip2RegionListener());
         application.run(args);
     }
 
