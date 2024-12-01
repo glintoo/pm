@@ -10,7 +10,7 @@ import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.core.config.GlobalConfig;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
-import com.lzbay.pm.base.common.domain.DataScopePlugin;
+//import com.lzbay.pm.base.common.domain.DataScopePlugin;
 import com.lzbay.pm.base.handler.MybatisPlusFillHandler;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -39,7 +39,7 @@ import java.util.Map;
  *
  */
 @Slf4j
-@Configuration
+//@Configuration
 public class DataSourceConfig {
 
     @Value("${spring.datasource.driver-class-name}")
@@ -90,8 +90,8 @@ public class DataSourceConfig {
     @Resource
     private MybatisPlusInterceptor paginationInterceptor;
 
-    @Resource
-    private DataScopePlugin dataScopePlugin;
+//    @Resource
+//    private DataScopePlugin dataScopePlugin;
 
     @Bean
     @Primary
@@ -137,9 +137,9 @@ public class DataSourceConfig {
         // 设置 MyBatis-Plus 分页插件 注意此处myBatisPlugin一定要放在后面
         List<Interceptor> pluginsList = new ArrayList<>();
         pluginsList.add(paginationInterceptor);
-        if (dataScopePlugin != null) {
+        /*if (dataScopePlugin != null) {
             pluginsList.add(dataScopePlugin);
-        }
+        }*/
         factoryBean.setPlugins(pluginsList.toArray(new Interceptor[pluginsList.size()]));
         // 添加字段自动填充处理
         factoryBean.setGlobalConfig(new GlobalConfig().setBanner(false).setMetaObjectHandler(new MybatisPlusFillHandler()));

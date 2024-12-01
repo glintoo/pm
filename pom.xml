@@ -24,6 +24,7 @@
         <mybatis-plus.version>3.5.7</mybatis-plus.version>
         <sa-token.version>1.37.0</sa-token.version>
         <druid.version>1.2.23</druid.version>
+        <p6spy.version>3.9.1</p6spy.version>
 
         <knife4j.version>4.5.0</knife4j.version>
         <fastjson.version>2.0.52</fastjson.version>
@@ -31,7 +32,6 @@
         <hutool.version>5.8.33</hutool.version>
         <google-guava.version>33.3.1-jre</google-guava.version>
         <commons-io.version>2.15.0</commons-io.version>
-        <p6spy.version>3.9.1</p6spy.version>
         <lombok.version>1.18.34</lombok.version>
 
         <therapi-javadoc.version>0.15.0</therapi-javadoc.version>
