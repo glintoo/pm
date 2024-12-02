@@ -30,6 +30,7 @@
         <fastjson.version>2.0.52</fastjson.version>
         <ip2region.version>2.7.0</ip2region.version>
         <hutool.version>5.8.33</hutool.version>
+        <reflections.version>0.9.11</reflections.version>
         <google-guava.version>33.3.1-jre</google-guava.version>
         <commons-io.version>2.15.0</commons-io.version>
         <lombok.version>1.18.34</lombok.version>
@@ -131,6 +132,18 @@
                 <version>${hutool.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>${reflections.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>guava</artifactId>
+                        <groupId>com.google.guava</groupId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>

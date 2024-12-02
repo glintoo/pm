@@ -34,6 +34,7 @@ public class CustomEnumUtil {
      * @param <T>
      * @return
      */
+    @SafeVarargs
     public static <T extends BaseEnum> List<Object> differenceValueList(Class<? extends BaseEnum> enumClass, T... exclude) {
         HashSet<Object> valueSet = new HashSet<>();
         if (exclude != null) {
