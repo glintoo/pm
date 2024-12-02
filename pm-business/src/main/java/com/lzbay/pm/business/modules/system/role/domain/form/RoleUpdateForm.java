@@ -3,16 +3,13 @@ package com.lzbay.pm.business.modules.system.role.domain.form;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 角色更新修改
  *
- * @Author 1024创新实验室: 胡克
- * @Date 2022-02-26 19:09:42
- * @Wechat zhuoda1024
- * @Email lab1024@163.com
- * @Copyright  <a href="https://1024lab.net">1024创新实验室</a>
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class RoleUpdateForm extends RoleAddForm {
 

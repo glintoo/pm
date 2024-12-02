@@ -1,8 +1,8 @@
 package com.lzbay.pm.business.modules.system.role.domain.vo;
 
+import com.lzbay.pm.business.modules.system.menu.domain.vo.MenuSimpleTreeVO;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
-import net.lab1024.sa.admin.module.system.menu.domain.vo.MenuSimpleTreeVO;
 
 import java.util.List;
 

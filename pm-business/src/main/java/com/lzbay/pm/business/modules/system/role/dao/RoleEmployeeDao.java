@@ -2,11 +2,11 @@ package com.lzbay.pm.business.modules.system.role.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import net.lab1024.sa.admin.module.system.employee.domain.vo.EmployeeVO;
-import net.lab1024.sa.admin.module.system.role.domain.entity.RoleEmployeeEntity;
-import net.lab1024.sa.admin.module.system.role.domain.form.RoleEmployeeQueryForm;
-import net.lab1024.sa.admin.module.system.role.domain.vo.RoleEmployeeVO;
-import net.lab1024.sa.admin.module.system.role.domain.vo.RoleVO;
+import com.lzbay.pm.business.modules.system.employee.domain.vo.EmployeeVO;
+import com.lzbay.pm.business.modules.system.role.domain.entity.RoleEmployeeEntity;
+import com.lzbay.pm.business.modules.system.role.domain.form.RoleEmployeeQueryForm;
+import com.lzbay.pm.business.modules.system.role.domain.vo.RoleEmployeeVO;
+import com.lzbay.pm.business.modules.system.role.domain.vo.RoleVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
@@ -18,11 +18,6 @@ import java.util.Set;
 /**
  * 角色 员工 dao
  *
- * @Author 1024创新实验室: 罗伊
- * @Date 2022-03-07 18:54:42
- * @Wechat zhuoda1024
- * @Email lab1024@163.com
- * @Copyright  <a href="https://1024lab.net">1024创新实验室</a>
  */
 @Mapper
 @Component

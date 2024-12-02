@@ -1,7 +1,7 @@
 package com.lzbay.pm.business.modules.system.role.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import net.lab1024.sa.admin.module.system.role.domain.entity.RoleEntity;
+import com.lzbay.pm.business.modules.system.role.domain.entity.RoleEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
@@ -9,11 +9,6 @@ import org.springframework.stereotype.Component;
 /**
  * 角色 dao
  *
- * @Author 1024创新实验室: 罗伊
- * @Date 2022-02-26 21:34:01
- * @Wechat zhuoda1024
- * @Email lab1024@163.com
- * @Copyright  <a href="https://1024lab.net">1024创新实验室</a>
  */
 @Mapper
 @Component

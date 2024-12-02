@@ -5,6 +5,12 @@ import com.google.common.collect.Lists;
 import com.lzbay.pm.base.common.utils.CustomEnumUtil;
 import com.lzbay.pm.business.enums.DataScopeTypeEnum;
 import com.lzbay.pm.business.enums.DataScopeViewTypeEnum;
+import com.lzbay.pm.business.modules.system.department.service.DepartmentService;
+import com.lzbay.pm.business.modules.system.employee.dao.EmployeeDao;
+import com.lzbay.pm.business.modules.system.employee.domain.entity.EmployeeEntity;
+import com.lzbay.pm.business.modules.system.role.dao.RoleDataScopeDao;
+import com.lzbay.pm.business.modules.system.role.dao.RoleEmployeeDao;
+import com.lzbay.pm.business.modules.system.role.domain.entity.RoleDataScopeEntity;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 

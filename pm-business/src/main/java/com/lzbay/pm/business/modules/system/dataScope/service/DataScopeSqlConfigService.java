@@ -2,6 +2,7 @@ package com.lzbay.pm.business.modules.system.dataScope.service;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.lzbay.pm.base.common.utils.CustomRequestUtil;
+import com.lzbay.pm.business.PmBusinessApplication;
 import com.lzbay.pm.business.enums.DataScopeTypeEnum;
 import com.lzbay.pm.business.enums.DataScopeViewTypeEnum;
 import com.lzbay.pm.business.enums.DataScopeWhereInTypeEnum;
@@ -58,7 +59,7 @@ public class DataScopeSqlConfigService {
      * 刷新 所有添加数据范围注解的接口方法配置<class.method,DataScopeSqlConfigDTO></>
      */
     private Map<String, DataScopeSqlConfig> refreshDataScopeMethodMap() {
-        Reflections reflections = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forPackage(AdminApplication.COMPONENT_SCAN)).setScanners(new MethodAnnotationsScanner()));
+        Reflections reflections = new Reflections(new ConfigurationBuilder().setUrls(ClasspathHelper.forPackage(PmBusinessApplication.SCAN_PACKAGE)).setScanners(new MethodAnnotationsScanner()));
         Set<Method> methods = reflections.getMethodsAnnotatedWith(DataScope.class);
         for (Method method : methods) {
             DataScope dataScopeAnnotation = method.getAnnotation(DataScope.class);
