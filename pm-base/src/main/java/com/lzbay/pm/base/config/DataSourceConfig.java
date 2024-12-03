@@ -19,12 +19,10 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
 import org.springframework.aop.support.JdkRegexpMethodPointcut;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.*;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import javax.sql.DataSource;
@@ -40,6 +38,7 @@ import java.util.Map;
  */
 @Slf4j
 @Configuration
+@Role(RootBeanDefinition.ROLE_INFRASTRUCTURE)
 public class DataSourceConfig {
 
     @Value("${spring.datasource.driver-class-name}")
@@ -179,6 +178,7 @@ public class DataSourceConfig {
     }
 
     @Bean
+    @Role(RootBeanDefinition.ROLE_INFRASTRUCTURE)
     public JdkRegexpMethodPointcut jdkRegexpMethodPointcut() {
         JdkRegexpMethodPointcut jdkRegexpMethodPointcut = new JdkRegexpMethodPointcut();
         jdkRegexpMethodPointcut.setPatterns(methodPointcut);
@@ -186,6 +186,7 @@ public class DataSourceConfig {
     }
 
     @Bean
+    @Role(RootBeanDefinition.ROLE_INFRASTRUCTURE)
     public DefaultPointcutAdvisor defaultPointcutAdvisor() {
         DefaultPointcutAdvisor pointcutAdvisor = new DefaultPointcutAdvisor();
         pointcutAdvisor.setPointcut(jdkRegexpMethodPointcut());

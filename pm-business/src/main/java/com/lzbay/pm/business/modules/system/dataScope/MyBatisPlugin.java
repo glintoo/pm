@@ -14,7 +14,9 @@ import org.apache.ibatis.plugin.Plugin;
 import org.apache.ibatis.plugin.Signature;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
+import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Role;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -27,6 +29,7 @@ import java.util.Properties;
  */
 @Intercepts({@Signature(type = org.apache.ibatis.executor.Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class})})
 @Component
+@Role(RootBeanDefinition.ROLE_INFRASTRUCTURE)
 public class MyBatisPlugin extends DataScopePlugin {
 
     @Resource
