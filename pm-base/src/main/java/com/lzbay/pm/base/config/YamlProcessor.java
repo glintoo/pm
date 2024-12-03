@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * 加载 pm-*.yml 配置文件
+ * 加载 pm-*.yaml 配置文件
  */
 @Configuration
 @Slf4j
@@ -42,7 +42,7 @@ public class YamlProcessor implements EnvironmentPostProcessor {
     private void loadProperty(MutablePropertySources propertySources) {
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
-            Resource[] resources = resolver.getResources("classpath*:pm-*.yml");
+            Resource[] resources = resolver.getResources("classpath*:pm-*.yaml");
 
             if(resources.length<1){
                 return;
