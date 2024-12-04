@@ -25,6 +25,7 @@
         <sa-token.version>1.37.0</sa-token.version>
         <druid.version>1.2.23</druid.version>
         <p6spy.version>3.9.1</p6spy.version>
+        <aws-java-sdk.version>1.12.778</aws-java-sdk.version>
 
         <knife4j.version>4.5.0</knife4j.version>
         <fastjson.version>2.0.52</fastjson.version>
@@ -32,6 +33,8 @@
         <hutool.version>5.8.33</hutool.version>
         <reflections.version>0.9.11</reflections.version>
         <google-guava.version>33.3.1-jre</google-guava.version>
+
+        <redisson.version>3.39.0</redisson.version>
         <commons-io.version>2.15.0</commons-io.version>
         <lombok.version>1.18.34</lombok.version>
 
@@ -99,6 +102,18 @@
                 <version>${druid.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-s3</artifactId>
+                <version>${aws-java-sdk.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>commons-logging</artifactId>
+                        <groupId>commons-logging</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
             <!-- Sa-Token 权限认证，在线文档：https://sa-token.cc -->
             <dependency>
                 <groupId>cn.dev33</groupId>
@@ -144,6 +159,13 @@
                         <groupId>com.google.guava</groupId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
             </dependency>
 
             <dependency>
